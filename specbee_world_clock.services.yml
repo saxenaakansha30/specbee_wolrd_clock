@@ -1,0 +1,4 @@
+services:
+ specbee_world_clock.datetime:
+   class: Drupal\specbee_world_clock\DateTime
+   arguments: ['@date.formatter', '@config.factory']

@@ -1,0 +1,14 @@
+specbee_world_clock.settings:
+  path: '/admin/structure/specbee_world_clock/settings'
+  defaults:
+    _form: '\Drupal\specbee_world_clock\Form\SpecbeeWorldClockSettingsForm'
+    _title: 'World Clock Settings Form'
+  requirements:
+    _permission: 'administer site configuration'
+specbee_world_clock.json_api:
+  path: '/specbee_world_clock/get_date_time'
+  defaults:
+    _controller: 'Drupal\specbee_world_clock\Controller\SpecBeeWolrdClockController::getDateTime'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

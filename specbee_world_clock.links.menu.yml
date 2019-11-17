@@ -1,0 +1,5 @@
+specbee_world_clock.admin:
+  title: 'Specbee World Clock'
+  description: 'Admin Settings Page for Specbee World Clock'
+  parent: system.admin_config
+  route_name: specbee_world_clock.settings

@@ -1,0 +1,12 @@
+world_clock:
+  version: 1.x
+  js:
+    js/world-clock.js: {}
+  dependencies:
+    - core/jquery
+world_clock_ajax:
+  version: 1.x
+  js:
+    js/world-clock-ajax.js: {}
+  dependencies:
+    - core/jquery

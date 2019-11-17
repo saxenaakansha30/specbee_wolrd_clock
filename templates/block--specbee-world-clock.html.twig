@@ -1,0 +1,22 @@
+{% if output is not empty %}
+  <div class="specbee-world-clock-wrapper">
+    The time in city {{ output['city'] }} of country {{ output['country'] }} is
+    <strong>
+      {% if output['indiDate'] is not empty %}
+        <span class="time"
+          data-year="{{ output['indiDate'][0] }}"
+          data-month="{{ output['indiDate'][1] }}"
+          data-day="{{ output['indiDate'][2] }}"
+          data-hour="{{ output['indiDate'][3] }}"
+          data-min="{{ output['indiDate'][4] }}"
+          data-sec="{{ output['indiDate'][5] }}"
+          data-zone="{{ output['zone'] }}"
+        >
+      {% else %}
+        <span class="time">
+      {% endif %}
+          {{ output['time'] }}
+        </span>
+    </strong>
+  </div>
+{% endif %}

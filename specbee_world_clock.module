@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * For implementing hooks.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function specbee_world_clock_theme() {
+  return [
+    'specbee_world_clock_block' => [
+    'variables' => ['output' => NULL],
+    'template' => 'block--specbee-world-clock',
+     ],
+  ];
+}

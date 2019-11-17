@@ -1,0 +1,4 @@
+name: Specbee World Clock
+description: A Plugin for showing time for various locaion across world.
+type: module
+core: 8.x
