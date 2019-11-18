@@ -7,6 +7,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\specbee_world_clock\DateTime;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides a Specbee Wolrd Clock's Block.
@@ -109,6 +110,16 @@ class SpecbeeWorldClockBlock extends BlockBase implements ContainerFactoryPlugin
         'library' => $library,
       ],
     ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheTags() {
+    return Cache::mergeTags(
+      parent::getCacheTags(),
+      $this->config->getCacheTags()
+    );
   }
 
 }
