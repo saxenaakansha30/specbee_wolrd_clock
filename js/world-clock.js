@@ -20,15 +20,12 @@
           var sec = $(wrapper).data('sec');
 
           var updatedDate = dateWithTimeZone(zone, year, month, day, hour, min, sec);
-          console.log(updatedDate);
-          console.log(sec);
           var updatedYear = updatedDate.getFullYear();
           var updatedMonth = updatedDate.getMonth();
           var updatedDay = updatedDate.getDate();
           var updatedHour = updatedDate.getHours();
           var updatedMinute = updatedDate.getMinutes();
           var updatedSecond = updatedDate.getSeconds();
-
 
           /**
            * Update data attributes of the wrapper.
@@ -68,12 +65,12 @@
       let date = new Date(Date.UTC(year, month, day, hour, minute, second));
 
       let utcDate = new Date(date.toLocaleString('en-US', { timeZone: "UTC" }));
-      let tzDate = new Date(date.toLocaleString('en-US', { timeZone: timeZone }));
-      let offset = utcDate.getTime() - tzDate.getTime();
+  //    let tzDate = new Date(date.toLocaleString('en-US', { timeZone: timeZone }));
+  //    let offset = utcDate.getTime() - tzDate.getTime();
 
-      date.setTime( date.getTime() + offset );
+  //     date.setTime( date.getTime() + offset );
 
-      return date;
+      return utcDate;
 
     };
 
@@ -99,7 +96,7 @@
                         + updatedYear + ' - '
                         + updatedHour + ':'
                         + updatedMinute + ' '
-                        + updatedSecond + ' '
+//                        + updatedSecond + ' '
                         + AmOrPm;
       $(wrapper).html(updatedDateTime);
     }
